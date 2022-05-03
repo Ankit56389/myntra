@@ -1,0 +1,125 @@
+.product-rating{
+    display: flex;
+    align-items: center;
+}
+.product-name{
+    font-size: 20px;
+    font-weight: 100;
+    margin: 6px 0;
+}
+.product-rating{
+    border-bottom: 1px solid #d4d5d9;
+}
+.product-price{
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 14px;
+}
+.product-discount{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 8px;
+}
+.product-vat-info{
+    color: #03a685;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    margin: 5px 10px 0 0;
+}
+.product-size{
+    font-size: 16px;
+    margin: 20px 0;
+    font-weight: 500;
+}
+.show-size-chart{
+    color: #ff3e6c;
+    margin-left: 20px;
+}
+.product-size-number{
+    border: 1px solid;
+    padding: 16px 21px;
+    border-radius: 30px;
+    margin: 10px 4px;
+}
+.product-action{
+    display: flex;
+    margin-top: 35px;
+    align-items: center;
+}
+.add-to-bag{
+    background-color: #ff527b;
+    padding: 16px 26px;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 12px;
+}
+.wishlist{
+    border: 1px solid #535766;
+    outline: none;
+    padding: 10px 16px;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+}
+.wishlist button{
+    outline: none;
+    border: none;
+    font-size: 16px;
+    margin: 0px 0px 4px 6px;
+}
+
+.product-description{
+    margin-left: 80px;
+}
+.product-details{
+    width: 635px;
+    margin-bottom: 50px;
+    box-shadow: 1px 1px 1px 1px #c1c0bf;
+    padding: 20px 30px;
+}
+
+.gift-wrap-header{
+    font-size: 12px;
+    font-weight: 600;
+    color: #535766;
+    margin: 24px 0 12px;
+}
+.gift-wrap-content{
+    background: #fff1ec;
+}
+.gift-wrap-title{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1px;
+    color: #282c3f;
+}
+.gift-wrap-content{
+    font-size: 12px;
+    border-radius: 4px;
+    line-height: 16px;
+}
+.gift-wrap-add{
+    margin-top: 8px;
+    font-weight: 600;
+    color: #ff3f6c;
+    /* display: inline-block; */
+}
+.price-block-header{
+    font-size: 12px;
+    font-weight: 600;
+    margin: 24px 0 16px;
+    color: #535766;
+}
+.gift-wrap-container{
+    width: 300px;
+    margin: 0px auto;
+}
+.btn{
+    width: 100%;
+}

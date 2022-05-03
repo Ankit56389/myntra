@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+.d-flex{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+
+/* PADDING PROPERTIES */
+.pt-25{
+    padding: 25px 0px;
+}
+.pt-40{
+    padding-top: 40px;
+}
+
+/* FONT PROPERTIES */
+.f-size-14{
+    font-size: 14px;
+}
+
+/* MARGIN PROPERTIES */
+.my-5{
+    margin: 6px 0;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
+.ml-16{
+    margin-left: 16px;
+}
+.ml-30{
+    margin-left: 30px;
+}
+.mt-100{
+    margin-top: 100px;
+}
+.mt-25{
+    margin-top: 25px;
+}
+.mt-50{
+    margin-top: 50px;
+}
+
+/* COLOR */
+.color-ff3c6f{
+    color: #ff3c6f;
+}
+.color-282c3f{
+    color: #282c3f;
+}
+.color-535665{
+    color: #535665;
+}
+.color-ff905{
+    color: #ff905a;
+}
+
+/* FONT PROPERTIES */
+.font-size-24{
+    font-size: 24px;
+}
+.font-size-20{
+    font-size: 20px;
+}
+.font-size-16{
+    font-size: 16px;
+}
+.font-weight-500{
+    font-weight: 500;
+}
+
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

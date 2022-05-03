@@ -1,0 +1,39 @@
+.products{
+    display: flex;
+    margin-top: 120px;
+}
+
+.products-images img{
+    width: 100%;
+}
+.products-images{
+    width: 100%;
+}
+.product-list{
+    width: 100%;
+    margin: 0 20px;
+    box-shadow: 1px 1px 6px 2px;
+    padding: 5px 10px;
+}
+.add-to-bag button{
+    background-color: #ff527b;
+    padding: 10px 35px;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+.remove-from-bag button{
+    background-color: #ff527b;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+    

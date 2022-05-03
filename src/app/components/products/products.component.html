@@ -1,0 +1,31 @@
+<ng-container>
+    <!-- <ng-image-slider [images]="imageSlider"></ng-image-slider>  -->
+    <div class="carousel-item">
+        <img  src="/assets/images/sliderimage.png" alt="">
+        <!-- <img src="/assets/images/imgSlider1.jpg" alt="">
+        <img src="/assets/images/imageSlider2.jpg" alt=""> -->
+        <div class="carousel-caption d-none d-md-block">
+          <h5>...</h5>
+          <p>...</p>
+        </div>
+      </div>
+
+    <div class="products">
+        <div class="products-images"><img class="product-img" src="/assets/images/pantaloons.webp" alt=""></div>
+        <div class="products-images"><img class="product-img" src="/assets/images/tommyhilfiger.webp" alt=""></div>
+        <div class="products-images"><img class="product-img" src="/assets/images/trendycasuals.webp" alt=""></div>
+        <div class="products-images"><img class="product-img" src="/assets/images/tommyhilfiger.webp" alt=""></div>
+        <div class="products-images"><img class="product-img" src="/assets/images/trendycasuals.webp" alt=""></div>
+        <div class="products-images"><img class="product-img" src="/assets/images/exclusivewatches.webp" alt=""></div>
+    </div>
+
+    <div class="d-flex mt-50">
+        <div class="product-list" *ngFor="let item of products">
+            <div class="product-image"><img src="{{item.image}}" alt="" width="100%"></div>
+            <p>{{item.productName}}</p>
+            <p>{{item.price}}</p>
+            <div class="add-to-bag mt-25" ><button *ngIf="!item.isInCart" (click)="addItem(item)">Add To Bag</button></div>
+            <div class="remove-from-bag mt-25"><button *ngIf="item.isInCart" (click)="removeFromBag(item)">REMOVE FROM BAG</button></div>
+        </div>
+    </div>
+</ng-container>

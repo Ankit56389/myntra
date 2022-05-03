@@ -1,0 +1,46 @@
+<div class="container">
+    <nav class="header">
+        <div class="d-flex align-items-center justify-content-between pt-25">
+            <!-- NAV-LOGO -->
+            <div class="d-flex">
+                <div class="nav-logo">
+                    <a href="#"><img src="/assets/images/myntralogo.png" width="53px" height="36px"
+                            alt="Myntra logo"></a>
+                </div>
+
+                <!-- NAV LINKS -->
+                <ul class="nav-links d-flex align-items-center ml-16">
+                    <li>MEN</li>
+                    <li>WOMEN</li>
+                    <li>KIDS</li>
+                    <li>HOME & LIVING</li>
+                    <li>BEAUTY</li>
+                    <li class="mb-5">STUDIO <sup style="color: red;">NEW</sup> </li>
+                </ul>
+            </div>
+
+            <!-- NAV SEARCH BAR -->
+            <div class="d-flex align-items-center">
+                <img class="search-icon" src="/assets/images/searchicon.png" alt="search icon">
+                <input class="search-bar" type="text" placeholder="Search for products, brands and more">
+            </div>
+
+            <!-- NAV ACTIONS -->
+            <div class="nav-actions d-flex">
+                <div class="user-profile">
+                    <img src="/assets/images/profile.png" width="24px" height="24px" alt="profile">
+                    <p>Profile</p>
+                </div>
+                <div class="user-wishlist">
+                    <img src="/assets/images/wishlist.png" alt="wishlist" width="17px" height="22px">
+                    <p>Wishlist</p>
+                </div>
+                <div class="user-bag" routerLink="/cart" routerLinkActive="active">
+                    <img src="/assets/images/bag.png" alt="bag" width="22px" height="22px">
+                    <span matBadge="{{count.length}}" matBadgeOverlap="false" matBadgeSize="small"></span>
+                    <p>Bag</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,55 @@
+li{
+    color: #282c3f;
+}
+.download-link img{
+    height: 42px;
+    margin-right: 10px;
+}
+.fb-icon img{
+    width: 20px;
+    height: 20px;
+}
+.youtube-icon img{
+    width: 28px;
+    height: 20px;
+}
+.insta-icon img{
+    width: 20px;
+    height: 22px;
+}
+.twitter-icon img{
+    width: 20px;
+    height: 20px;
+}
+.social-media span img{
+    margin: 0 15px 0 0;
+}
+.online-shopping li a,
+.useful-links li a{
+    color: #282c3f;
+    font-size: 12px;
+    font-weight: 500;
+}
+.online-shopping{
+    margin-right: 70px;
+}
+.online-shopping div li,
+.useful-links div li
+{
+    color: #696b79;
+    padding-bottom: 5px ;
+    font-size: 14px;
+}
+.promises{
+    width: 250px;
+}
+.original-img img,
+.return-icon img{
+    width: 48px;
+    height: 40px;
+}
+.app-experience p{
+    font-size: 12px;
+    font-weight: 500;
+    color: #282c3f;
+}

@@ -1,0 +1,16 @@
+<app-navigation></app-navigation>
+<section>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="loginPage">
+            <div class="discount-offer"><img src="/assets/images/discount-img.webp" alt="discount offer"></div>
+            <div class="mobileInputContainer">
+                <div class="welcome-header">Login <span>or</span> Signup</div>
+                <div class="mobileNumber"><input type="text" formControlName="mobileNumber" class="mobile-number-input"></div>
+                <p>By continuing, I agree to the <span class="color-ff3c6f">Terms of Use</span> & <span class="color-ff3c6f">Privacy Policy</span> </p> 
+                <button type="submit" [disabled]="loginForm.invalid"  class="submitButton mt-25">Continue</button>
+                <div class="get-help">Have trouble logging in? <span class="color-ff3c6f">Get Help</span></div>
+            </div>
+        </div>
+    </form>
+</section>

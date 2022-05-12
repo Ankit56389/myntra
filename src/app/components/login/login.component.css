@@ -17,12 +17,11 @@
     height: 160px;
 }
 .loginPage{
-    margin: 100px auto;
+    margin: 160px auto;
     width: 400px;
 }
 .mobileInputContainer{
     width: 350px;
-    margin: 0 auto;
     margin-top: 40px;
 }
 input.mobile-number-input {
@@ -133,4 +132,19 @@ font-weight: 500;
 
 .form.ng-touched.ng-invalid{
     border: 1px solid red;
+}
+.authHeader{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #424553;
+}
+.topPlaceHolder{
+    color: #94969f;
+    top: -50px;
+    left: 14px;
+    font-size: 12px;
+    padding: 0 2px;
+    position: relative;
+    background-color: #fff;
 }

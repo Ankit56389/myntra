@@ -19,8 +19,8 @@
 }
 
 /* PADDING PROPERTIES */
-.pt-25{
-    padding: 25px 0px;
+.pt-20{
+    padding-top: 20px;
 }
 .pt-40{
     padding-top: 40px;
@@ -35,8 +35,11 @@
 .my-5{
     margin: 6px 0;
 }
-.mb-5{
-    margin-bottom: 5px;
+.mb-30{
+    margin-bottom: 30px !important;
+}
+.mb-1{
+    margin-bottom: 1px !important;
 }
 .ml-16{
     margin-left: 16px;
@@ -52,6 +55,9 @@
 }
 .mt-50{
     margin-top: 50px;
+}
+.mt-70{
+    margin-top: 70px;
 }
 
 /* COLOR */
@@ -69,6 +75,9 @@
 }
 
 /* FONT PROPERTIES */
+.text-center{
+    text-align: center;
+}
 .font-size-24{
     font-size: 24px;
 }
@@ -80,6 +89,11 @@
 }
 .font-weight-500{
     font-weight: 500;
+}
+
+/* WIDTH SIZES */
+.w-100{
+    width: 100%;
 }
 
 /* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

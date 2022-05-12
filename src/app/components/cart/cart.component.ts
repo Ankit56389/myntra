@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { AddRemoveService } from 'src/app/services/add-remove.service';
 
@@ -11,14 +12,22 @@ export class CartComponent implements OnInit {
   constructor(public addRemoveService:AddRemoveService) { }
 
   ngOnInit(): void {
+    this.cartProduct = JSON.parse(localStorage.getItem("cartitem")||"");
+    this.newTotal=JSON.parse(localStorage.getItem("totalPrice")||"")
   }
 
   cartProduct=this.addRemoveService.cartItem;
   
-  itemQuantity:any=1;
+  // count:any=this.addRemoveService.cartItem;
 
-  mychange(event:any){
-    this.itemQuantity=event.target.value;
+  // totalPrice:any=1;
+  discountOffer=this.addRemoveService.discount;
+  newTotal=this.addRemoveService.totalPrice;
+
+  itemQuantity(event:any, item:any){
+    // item.totalPrice=item.price;
+    item.totalPrice = item.price*event.target.value;
+    // this.newTotal+=item.totalPrice;
   }
 
   

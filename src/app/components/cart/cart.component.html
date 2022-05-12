@@ -1,89 +1,71 @@
-<div class="product-detail-container pt-40 ml-30  d-flex">
-    <div>
-        <div class="product-details d-flex" *ngFor="let item of cartProduct">
-            <div>
-                <div> <img src="{{item.image}}" height="250px" alt=""></div>
-                <select (change)="mychange($event)"  class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                    <option selected value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-            </div>
-            <div class="product-description">
-                <div class="font-size-24 color-282c3f font-weight-500">{{item.productName}}</div>
-                <div class="product-name color-535665">Men Navy Blue Slip-On Sneakers</div>
-                <div class="product-rating my-5"><span class="font-size-16 color-282c3f">4.2</span> <span><img
-                            src="/assets/images/ratingstar.png" width="24px" height="24px" alt=""></span><span> <span
-                            class="color-535665">157 Ratings</span></span></div>
+<app-navigation></app-navigation>
+<div class="product-detail-container pt-40 ml-30">
+    <div class="d-flex w-100 mt-70">
+        <div>
+            <div class="product-details d-flex" *ngFor="let item of cartProduct">
                 <div>
+                    <div> <img src="{{item.image}}" height="148px" alt=""></div>
+                </div>
+                <div class="product-description">
+                    <div class="color-282c3f font-weight-500">{{item.productName}}</div>
+                    <div class="product-name color-535665">The Roadster Lifestyle Co Men White Sneakers</div>
                     <div>
-                        <span class="product-price">{{item.price}}</span> <del>Rs.1999</del> <span
-                            class="product-discount color-ff905">(Rs.1300 OFF)</span>
+                        <span>Qty:</span>
+                        <select (change)="itemQuantity($event,item)" class="form-select form-select-lg mb-3"
+                            aria-label=".form-select-lg example">
+                            <option selected value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <div>Item Price: {{item.totalPrice}}rs</div>
                     </div>
-                    <div class="product-vat-info">inclusive of all taxes</div>
-                    <div class="product-size">SELECT SIZE (UK Size) <span class="show-size-chart">SIZE CHART ></span>
-                    </div>
-                    <div class="my-5">
-                        <span class="product-size-number">6</span>
-                        <span class="product-size-number">7</span>
-                        <span class="product-size-number">8</span>
-                        <span class="product-size-number">9</span>
-                        <span class="product-size-number">10</span>
-                    </div>
+                </div>
+                <!-- <div ><button >Remove Item</button></div> -->
+            </div>
+        </div>
 
-                    <div class="product-action">
-                        <button class="add-to-bag">ADD TO BAG</button>
-                        <div class="wishlist d-flex align-items-center">
-                            <span><img src="/assets/images/wishlist.png" width="20px" alt=""></span>
-                            <button>WISHLIST</button>
-                        </div>
+        <div class="gift-wrap-container">
+            <div class="gift-wrap-header">
+                <p>GIFTING & PERSONALIZATION</p>
+                <div class="gift-wrap-content d-flex">
+                    <div><img src="/assets/images/gift-wrapper.webp" alt=""></div>
+                    <div>
+                        <span class="gift-wrap-title">
+                            <p>Buying for a loved one? </p>
+                        </span>
+                        <span class="gift-wrap-content">
+                            <p>Gift wrap and personalised message on card, only for ₹25 </p>
+                        </span>
+                        <span class="gift-wrap-add">
+                            <p>ADD GIFT WRAP</p>
+                        </span>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="gift-wrap-container">
-        <div class="gift-wrap-header">
-            <p>GIFTING & PERSONALIZATION</p>
-            <div class="gift-wrap-content d-flex">
-                <div><img src="/assets/images/gift-wrapper.webp" alt=""></div>
-                <div>
-                    <span class="gift-wrap-title">
-                        <p>Buying for a loved one? </p>
-                    </span>
-                    <span class="gift-wrap-content">
-                        <p>Gift wrap and personalised message on card, only for ₹25 </p>
-                    </span>
-                    <span class="gift-wrap-add">
-                        <p>ADD GIFT WRAP</p>
-                    </span>
+            <div class="price-block-container">
+                <p class="price-block-header">PRICE DETAILS ({{cartProduct.length}} item)</p>
+                <div class="d-flex justify-content-between">
+                    <div>Total MRP</div>
+                    <div >{{newTotal}}</div>
                 </div>
+                <div class="d-flex justify-content-between">
+                    <div>Discount on MRP</div>
+                    <div *ngIf="newTotal" style="color:#03a685;">{{discountOffer}}</div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>Coupon Discount</div>
+                    <div style="color: #ff3f6c;">Apply Coupon</div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>Convenience Fee <span>Know More</span></div>
+                    <div style="color:#03a685;">Free</div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>Total Amount</div>
+                    <div *ngIf="newTotal">{{newTotal-discountOffer}}</div>
+                </div>
+                <div class="place-order">PLACE ORDER</div>
             </div>
-        </div>
-        <div class="price-block-container">
-            <p class="price-block-header">PRICE DETAILS (1 item)</p>
-            <div class="d-flex justify-content-between">
-                <div>Total MRP</div>
-                <div *ngFor="let item of cartProduct">{{item.price*itemQuantity}}</div>
-            </div>
-            <div class="d-flex justify-content-between">
-                <div>Discount on MRP</div>
-                <div>itemPrice</div>
-            </div>
-            <div class="d-flex justify-content-between">
-                <div>Coupon Discount</div>
-                <div>Apply Coupon</div>
-            </div>
-            <div class="d-flex justify-content-between">
-                <div>Convenience Fee <span>Know More</span></div>
-                <div>Free</div>
-            </div>
-            <div class="d-flex justify-content-between">
-                <div>Total Amount</div>
-                <div>total</div>
-            </div>
-            <div>PLACE ORDER</div>
         </div>
     </div>
 </div>

@@ -6,14 +6,15 @@ import { LoginComponent } from './components/login/login.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { AuthGuardGuard } from './auth-guard.guard';
 import { CartComponent } from './components/cart/cart.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login' ,  component:LoginComponent },
   { path: 'navigation' ,  component:NavigationComponent },
-  { path: 'header', canActivate:[AuthGuardGuard],  component:HeaderComponent },
-  { path: 'cart', canActivate:[AuthGuardGuard],  component:CartComponent },
-  // { path: 'products',canActivate:[AuthGuardGuard] , component:ProductsComponent}
+  { path: 'header',  component:HeaderComponent },
+  { path: 'cart',   component:CartComponent },
+  { path: 'signup', component:SignupComponent}
 
 ];
 

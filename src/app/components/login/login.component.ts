@@ -11,14 +11,19 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  loginForm:any;
+
   ngOnInit(): void {
+    this.loginForm = new FormGroup({
+      email: new FormControl('', [Validators.required,Validators.email]),
+      password: new FormControl('', [Validators.required,Validators.minLength(6)])
+    });
   }
-  loginForm = new FormGroup({
-    mobileNumber: new FormControl('', [Validators.required])
-  });
 
   onSubmit() {
-    localStorage.setItem('mobileNumber', this.loginForm.get('mobileNumber')?.value);
+    localStorage.setItem('email', this.loginForm.get('email')?.value);
+    localStorage.setItem('password', this.loginForm.get('password')?.value);
+    // console.log(this.loginForm.value);
     this.router.navigate(['header']);
   }
 
@@ -26,8 +31,11 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['signup']);
   }
 
-  get mobileNumber() {
-    return this.loginForm.get('mobileNumber');
+  get email() {
+    return this.loginForm.get('email');
   }
   
+  get password() {
+    return this.loginForm.get('password');
+  }
 }

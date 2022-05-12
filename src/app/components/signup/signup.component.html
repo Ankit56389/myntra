@@ -1,0 +1,32 @@
+<form [formGroup]="userRegisterForm" >
+    <div class="signupPage">
+        <div class="signupHeader">Sign up</div>
+        <div class="userDetails">
+            <div class="mb-30">
+                <input type="text" #emailSignup formControlName="email" placeholder="Email" class="email-input w-100 userField">
+                <small *ngIf="email && email.invalid">Enter Valid Email</small>
+            </div>
+            <div class="mb-30">
+                <input type="text" #passwordSignup formControlName="password" class="pasword-input w-100 userField"
+                    placeholder="Password">
+                    <small *ngIf="password && password.invalid">Minimum Length Should be 6</small>
+            </div>
+            <!-- <div class="mb-30">
+                <input type="text" formControlName="mNumber" class="pasword-input w-100 userField"
+                    placeholder="Mobile Number">
+                    <small *ngIf="mNumber && mNumber.invalid">Enter 10 Digits Mobile Number</small>
+            </div>
+            <div class="mb-30">
+                <input type="text" formControlName="name" class="pasword-input w-100 userField" placeholder="Full Name">
+                <small *ngIf="name && name.invalid">Enter Your Name</small>
+            </div> -->
+
+            <button type="submit" (Click)="onSignup(emailSignup.value,passwordSignup.value)" class="submitButton mt-25 w-100">CREATE
+                ACCOUNT</button>
+        </div>
+        <div class="text-center">
+            <p>Forgot Your Password ? <span class="color-ff3c6f">Reset Here</span> </p>
+        </div>
+        <div class="get-help text-center">Have trouble logging in? <span class="color-ff3c6f">Get Help</span></div>
+    </div>
+</form>

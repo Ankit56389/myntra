@@ -1,14 +1,25 @@
 <app-navigation></app-navigation>
 <section>
-
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="loginPage">
-            <div class="discount-offer"><img src="/assets/images/discount-img.webp" alt="discount offer"></div>
+            <!-- <div class="discount-offer"><img src="/assets/images/discount-img.webp" alt="discount offer"></div> -->
             <div class="mobileInputContainer">
-                <div class="welcome-header">Login <span>or</span> Signup</div>
-                <div class="mobileNumber"><input type="text" formControlName="mobileNumber" class="mobile-number-input"></div>
-                <p>By continuing, I agree to the <span class="color-ff3c6f">Terms of Use</span> & <span class="color-ff3c6f">Privacy Policy</span> </p> 
-                <button type="submit" [disabled]="loginForm.invalid"  class="submitButton mt-25">Continue</button>
+                <div class="authHeader">Login to your account</div>
+                <!-- <div class="welcome-header">Login <span>or</span> Signup</div> -->
+                <div class="mobileNumber">
+                    <div class="mb-3">
+                        <input type="text" formControlName="email" class="mobile-number-input">
+                        <span class="topPlaceHolder">Email</span>
+                        <div style="text-align: center;"> <small  *ngIf="email && email.invalid">Enter Valid Email</small></div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" formControlName="password" class="mobile-number-input"
+                            placeholder="Password">
+                    </div>
+                    <div style="text-align: center;"> <small  *ngIf="password && password.invalid">Min 6 Length</small></div>                    
+                    <button type="submit"  [disabled]="loginForm.invalid" class="submitButton mt-25">LOGIN</button>
+                </div>
+                <p>Forgot Your Password ? <span class="color-ff3c6f">Reset Here</span> </p>
                 <div class="get-help">Have trouble logging in? <span class="color-ff3c6f">Get Help</span></div>
             </div>
         </div>
